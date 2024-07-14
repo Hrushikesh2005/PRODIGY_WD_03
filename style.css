@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #2a2b2a;
+    color: white; 
+}
+
+.box0 {
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 3px solid;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.box0:hover {
+    box-shadow: 0 0 50px 20px rgba(0, 247, 255, 0.5);
+}
+
+.box0 button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 10px;
+    color: black;
+}
+
+.yes {
+    margin-right: 10px;
+}
+
+.box0 button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.box0.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ai {
+    background-color: black;
+}
+
+.choose_ai {
+    background-color: black;
+    display: flex;
+}
+
+.box1 {
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 3px solid;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.box1:hover {
+    box-shadow: 0 0 50px 20px rgba(0, 207, 230, 0.5);
+    /* Blue Glow */
+}
+
+.choose {
+    background-color: black;
+    display: flex;
+}
+
+.welcome {
+    background-color: black;
+}
+
+.box1 button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 10px;
+    color: black; 
+}
+
+.playerx {
+    margin-right: 10px;
+}
+
+.box1 button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.box1.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* board */
+.board {
+    min-width: 500px;
+    min-height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.board.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.board.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cell {
+    border-right: 5px solid rgb(8, 83, 164);
+    border-bottom: 5px solid rgb(8, 83, 164);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-family: 'Protest Riot';
+    color: white; 
+}
+
+.cell:nth-child(3n) {
+    border-right: none;
+}
+
+.cell:nth-child(6)~.cell {
+    border-bottom: none;
+}
+
+/* winner text */
+.winner {
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black; 
+}
+
+.winner-text {
+    background-color: black;
+}
+
+.winner button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 10px;
+    color: black; 
+}
+
+.winner button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.winner.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.playagain {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 10px;
+    color: black; 
+}
+
+.playagain:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
